@@ -1,12 +1,12 @@
 import random
-from views.tournament_view import TournamentView
-from models.tournament import Tournament
+from views.tournaments_view import TournamentsView
+from models.tournaments import Tournament
 from data_manager import save_tournaments, load_tournaments, load_players
 
 
-class TournamentController:
+class TournamentsController:
     def __init__(self):
-        self.view = TournamentView()
+        self.view = TournamentsView()
         self.tournaments = load_tournaments()
         self.current_tournament = None
 
@@ -19,7 +19,7 @@ class TournamentController:
 
     def select_tournament(self):
         if not self.tournaments:
-            print("❌ Aucun tournoi disponible !")
+            print(" Aucun tournoi disponible !")
             return
         for i, t in enumerate(self.tournaments):
             print(f"{i+1}. {t.name}")
@@ -27,7 +27,7 @@ class TournamentController:
         if 0 <= choix < len(self.tournaments):
             self.current_tournament = self.tournaments[choix]
         else:
-            print("❌ Numéro invalide !")
+            print(" Numéro invalide !")
 
     def add_player_to_tournament(self, tournament):
         players_data = load_players()
@@ -44,15 +44,14 @@ class TournamentController:
                     for p in tournament.players_list
                 )
                 if already_in:
-                    print(f"❌ {players_data[choix]['first_name']} est déjà dans le tournoi !")
+                    print(f" {players_data[choix]['first_name']} est déjà dans le tournoi !")
                 else:
                     tournament.players_list.append(players_data[choix])
-                    print(f"✅ {players_data[choix]['first_name']} ajouté !")
+                    print(f" {players_data[choix]['first_name']} ajouté !")
             else:
-                print(f"❌ Numéro {choix+1} invalide !")
-
+                print(f" Numéro {choix+1} invalide !")
         save_tournaments(self.tournaments)
-    
+
     def generate_pairs(self, tournament):
         players = tournament.players_list.copy()
         if tournament.current_round == 0:
@@ -112,10 +111,5 @@ class TournamentController:
                 self.add_player_to_tournament(self.current_tournament)
             elif choix == "4" and self.current_tournament:
                 new_round = self.start_round(self.current_tournament)
-                print(f"\n✅ {new_round.name} démarré avec {len(new_round.matches)} matchs !")
+                print(f"\n {new_round.name} démarré avec {len(new_round.matches)} matchs !")
                 for match in new_round.matches:
-                    print(f"  ⚔️  {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
-            elif choix == "5" and self.current_tournament:
-                self.enter_results(self.current_tournament)
-            elif choix == "6":
-                break

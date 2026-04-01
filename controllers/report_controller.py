@@ -15,6 +15,9 @@ class ReportController:
 
     def tournament_details(self):
         tournaments = load_tournaments()
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
         choix = int(input("Choisir un tournoi : ")) - 1
@@ -23,6 +26,9 @@ class ReportController:
 
     def list_tournament_players(self):
         tournaments = load_tournaments()
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
         choix = int(input("Choisir un tournoi : ")) - 1
@@ -32,6 +38,9 @@ class ReportController:
 
     def list_tournament_rounds(self):
         tournaments = load_tournaments()
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
         choix = int(input("Choisir un tournoi : ")) - 1

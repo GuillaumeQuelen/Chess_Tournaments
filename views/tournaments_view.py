@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class TournamentView:
+class TournamentsView:
     def get_info(self):
         name = input("Nom du tournoi : ")
 
@@ -11,7 +11,7 @@ class TournamentView:
                 datetime.strptime(starting_date, "%d/%m/%Y")
                 break
             except ValueError:
-                print("❌ Date invalide ! Format : JJ/MM/AAAA")
+                print("Date invalide ! Format : JJ/MM/AAAA")
 
         while True:
             ending_date = input("Date de fin (JJ/MM/AAAA) : ")
@@ -19,7 +19,7 @@ class TournamentView:
                 datetime.strptime(ending_date, "%d/%m/%Y")
                 break
             except ValueError:
-                print("❌ Date invalide ! Format : JJ/MM/AAAA")
+                print("Date invalide ! Format : JJ/MM/AAAA")
 
         location = input("Lieu : ")
         description = input("Description : ")
