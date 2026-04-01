@@ -1,6 +1,6 @@
 import os
 import json
-from models.tournament import Tournament
+from models.tournaments import Tournament
 from models.round import Round
 from models.match import Match
 
