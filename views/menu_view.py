@@ -1,0 +1,8 @@
+class MenuView:
+    def show_menu(self):
+        print("Bienvenue, quel menu souhaiteriez-vous accèder?")
+        print("1.Les joueurs")
+        print("2.Les tournois")
+        print("3.Les rapports")
+        print("4.Quitter")
+        return input("Votre choix : ")
