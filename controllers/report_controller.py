@@ -2,8 +2,56 @@ from models.players import Player
 from models.tournaments import Tournament
 from data_manager import dict_to_tournament
 
-# remplace load_players() par :
-Player.load_all()
 
-# remplace load_tournaments() par :
-[dict_to_tournament(t) for t in Tournament.load_all()]
+class ReportController:
+    def list_all_players(self):
+        players = Player.load_all()
+        sorted_players = sorted(players, key=lambda p: p["last_name"])
+        for p in sorted_players:
+            print(f"{p['last_name']} {p['first_name']} - {p['national_id']}")
+
+    def list_all_tournaments(self):
+        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        for t in tournaments:
+            print(f"{t.name} | {t.starting_date} → {t.ending_date} | {t.location}")
+
+    def tournament_details(self):
+        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
+        for i, t in enumerate(tournaments):
+            print(f"{i+1}. {t.name}")
+        choix = int(input("Choisir un tournoi : ")) - 1
+        t = tournaments[choix]
+        print(f"\n{t.name} | {t.starting_date} → {t.ending_date}")
+
+    def list_tournament_players(self):
+        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
+        for i, t in enumerate(tournaments):
+            print(f"{i+1}. {t.name}")
+        choix = int(input("Choisir un tournoi : ")) - 1
+        players = sorted(tournaments[choix].players_list, key=lambda p: p["last_name"])
+        for p in players:
+            print(f"{p['last_name']} {p['first_name']} - {p['national_id']}")
+
+    def list_tournament_rounds(self):
+        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        if not tournaments:
+            print("Aucun tournoi disponible !")
+            return
+        for i, t in enumerate(tournaments):
+            print(f"{i+1}. {t.name}")
+        choix = int(input("Choisir un tournoi : ")) - 1
+        t = tournaments[choix]
+        for r in t.rounds:
+            print(f"\n=== {r.name} ===")
+            for m in r.matches:
+                p1 = m.players[0][0]
+                p2 = m.players[1][0]
+                s1 = m.players[0][1]
+                s2 = m.players[1][1]
+                print(f"  {p1['first_name']} {s1} - {s2} {p2['first_name']}")

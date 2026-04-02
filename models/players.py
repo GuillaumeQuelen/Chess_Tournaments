@@ -1,4 +1,9 @@
-class Player:
+from models.base import Base
+
+
+class Player(Base):
+    data_file = "data/players.json"
+
     def __init__(self, last_name, first_name, birth_date, national_id):
         self.last_name = last_name
         self.first_name = first_name
