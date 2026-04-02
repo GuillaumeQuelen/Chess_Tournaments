@@ -65,6 +65,9 @@ class TournamentsController:
         return pairs
 
     def start_round(self, tournament):
+        if tournament.current_round >= tournament.number_of_rounds:
+            print("Nombre maximum de rounds atteint !")
+            return None
         from models.round import Round
         from models.match import Match
         tournament.current_round += 1
@@ -85,7 +88,11 @@ class TournamentsController:
             print("1. Joueur 1 gagne")
             print("2. Joueur 2 gagne")
             print("3. Match nul")
-            result = input("Résultat : ")
+            while True:
+                result = input("Résultat (1/2/3) : ")
+                if result in ["1", "2", "3"]:
+                    break
+                print("❌ Choix invalide ! Entre 1, 2 ou 3")
             if result == "1":
                 match.players[0][1] = 1
                 match.players[1][1] = 0
@@ -112,9 +119,10 @@ class TournamentsController:
                 self.add_player_to_tournament(self.current_tournament)
             elif choix == "4" and self.current_tournament:
                 new_round = self.start_round(self.current_tournament)
-                print(f"\n{new_round.name} démarré avec {len(new_round.matches)} matchs !")
-                for match in new_round.matches:
-                    print(f"  ⚔️  {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
+                if new_round:
+                    print(f"\n✅ {new_round.name} démarré avec {len(new_round.matches)} matchs !")
+                    for match in new_round.matches:
+                        print(f"  ⚔️  {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
             elif choix == "5" and self.current_tournament:
                 self.enter_results(self.current_tournament)
             elif choix == "6":

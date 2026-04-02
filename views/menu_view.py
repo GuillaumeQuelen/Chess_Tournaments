@@ -1,6 +1,6 @@
 class MenuView:
     def show_menu(self):
-        print("Bienvenue, quel menu souhaiteriez-vous accéder?")
+        print("\nBienvenue, quel menu souhaiteriez-vous accéder ?")
         print("1. Les joueurs")
         print("2. Les tournois")
         print("3. Les rapports")

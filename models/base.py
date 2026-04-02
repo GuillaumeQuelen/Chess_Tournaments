@@ -23,6 +23,7 @@ class Base:
             if not content.strip():
                 return []
             return json.loads(content)
+
     @classmethod
     def save_all_dicts(cls, dicts):
         os.makedirs("data", exist_ok=True)
