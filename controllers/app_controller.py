@@ -17,7 +17,7 @@ class AppController:
         while True:
             choix = self.menu.show_menu()
             if choix == "1":
-                self.player_controller.create_player()
+                self.player_controller.run()
             elif choix == "2":
                 self.tournament_controller.run()
             elif choix == "3":
