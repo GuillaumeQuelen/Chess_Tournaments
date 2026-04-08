@@ -92,7 +92,7 @@ class TournamentsController:
                 result = input("Résultat (1/2/3) : ")
                 if result in ["1", "2", "3"]:
                     break
-                print("❌ Choix invalide ! Entre 1, 2 ou 3")
+                print("Choix invalide ! Entre 1, 2 ou 3")
             if result == "1":
                 match.players[0][1] = 1
                 match.players[1][1] = 0
@@ -120,9 +120,9 @@ class TournamentsController:
             elif choix == "4" and self.current_tournament:
                 new_round = self.start_round(self.current_tournament)
                 if new_round:
-                    print(f"\n✅ {new_round.name} démarré avec {len(new_round.matches)} matchs !")
+                    print(f"\n {new_round.name} démarré avec {len(new_round.matches)} matchs !")
                     for match in new_round.matches:
-                        print(f"  ⚔️  {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
+                        print(f"    {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
             elif choix == "5" and self.current_tournament:
                 self.enter_results(self.current_tournament)
             elif choix == "6":
