@@ -68,6 +68,13 @@ class TournamentsController:
         if tournament.current_round >= tournament.number_of_rounds:
             print("Nombre maximum de rounds atteint !")
             return None
+        if tournament.rounds:
+            last_round = tournament.rounds[-1]
+            for match in last_round.matches:
+                total = match.players[0][1] + match.players[1][1]
+                if total == 0:
+                    print("Entrez les résultats du round en cours !")
+                    return None
         from models.round import Round
         from models.match import Match
         tournament.current_round += 1
