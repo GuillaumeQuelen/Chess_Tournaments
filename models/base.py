@@ -29,3 +29,14 @@ class Base:
         os.makedirs("data", exist_ok=True)
         with open(cls.data_file, "w") as f:
             json.dump(dicts, f, indent=4)
+
+    @staticmethod
+    def export_csv(filename, headers, rows):
+        os.makedirs("rapports", exist_ok=True)
+        filepath = os.path.join("rapports", filename)
+        with open(filepath, "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(headers)
+            for row in rows:
+                writer.writerow(row)
+        return filepath
