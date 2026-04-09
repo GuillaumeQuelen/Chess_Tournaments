@@ -60,9 +60,31 @@ class TournamentsController:
         else:
             players.sort(key=lambda p: p["score"], reverse=True)
         pairs = []
-        for i in range(0, len(players) - 1, 2):
-            pairs.append((players[i], players[i + 1]))
+        used = set()
+        played = self.get_played_matches(tournament)
+
+        for i, p1 in enumerate(players):
+            if p1["national_id"] in used:
+                continue
+            for p2 in players[i+1:]:
+                if p2["national_id"] in used:
+                    continue
+            pair = frozenset([p1["national_id"], p2["national_id"]])
+            if pair not in played:
+                pairs.append((p1, p2))
+                used.add(p1["national_id"])
+                used.add(p2["national_id"])
+                break
         return pairs
+
+    def get_played_matches(self, tournament):
+        played = set()
+        for r in tournament.rounds:
+            for m in r.matches:
+                p1_id = m.players[0][0]["national_id"]
+                p2_id = m.players[1][0]["national_id"]
+                played.add(frozenset([p1_id, p2_id]))
+        return played
 
     def start_round(self, tournament):
         if tournament.current_round >= tournament.number_of_rounds:
