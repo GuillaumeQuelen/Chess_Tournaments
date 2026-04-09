@@ -8,10 +8,11 @@ class ReportView:
         print("5. Rounds et matchs d'un tournoi")
         print("6. Retour")
         return input("Votre choix : ")
-    
+
     def report_format(self):
-        print("\n=== FORMAT DE RAPPORT ===")
-        print("1. Affichage console")
-        print("2. Export JSON")
-        print("3. Export CSV")
+        print("1. Afficher à l'écran")
+        print("2. Exporter en CSV")
         return input("Votre choix : ")
+
+    def confirm_export(self, filename):
+        print(f"\n {filename} exporté")

@@ -250,5 +250,12 @@
         "birth_date": "02/01/2000",
         "national_id": "ZE12548",
         "score": 0
+    },
+    {
+        "last_name": "Oe",
+        "first_name": "Eo",
+        "birth_date": "01/02/2000",
+        "national_id": "OI89574",
+        "score": 0
     }
 ]

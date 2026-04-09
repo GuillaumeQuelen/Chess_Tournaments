@@ -51,7 +51,6 @@ class TournamentsController:
                     print(f"{players_data[choix]['first_name']} ajouté !")
             else:
                 print(f"Numéro {choix+1} invalide !")
-        Tournament.save_all(self.tournaments)
 
     def generate_pairs(self, tournament):
         players = tournament.players_list.copy()
@@ -69,12 +68,12 @@ class TournamentsController:
             for p2 in players[i+1:]:
                 if p2["national_id"] in used:
                     continue
-            pair = frozenset([p1["national_id"], p2["national_id"]])
-            if pair not in played:
-                pairs.append((p1, p2))
-                used.add(p1["national_id"])
-                used.add(p2["national_id"])
-                break
+                pair = frozenset([p1["national_id"], p2["national_id"]])
+                if pair not in played:
+                    pairs.append((p1, p2))
+                    used.add(p1["national_id"])
+                    used.add(p2["national_id"])
+                    break
         return pairs
 
     def get_played_matches(self, tournament):
@@ -105,7 +104,6 @@ class TournamentsController:
         for player1, player2 in pairs:
             new_round.matches.append(Match(player1, player2))
         tournament.rounds.append(new_round)
-        Tournament.save_all(self.tournaments)
         return new_round
 
     def enter_results(self, tournament):
@@ -135,7 +133,6 @@ class TournamentsController:
                 match.players[1][1] = 0.5
                 p1["score"] += 0.5
                 p2["score"] += 0.5
-        Tournament.save_all(self.tournaments)
 
     def run(self):
         while True:
@@ -163,5 +160,6 @@ class TournamentsController:
             elif choix == "3":
                 self.enter_results(self.current_tournament)
             elif choix == "4":
+                Tournament.save_all(self.tournaments)
                 self.current_tournament = None
                 break

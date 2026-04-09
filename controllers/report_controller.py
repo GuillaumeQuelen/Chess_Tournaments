@@ -1,5 +1,3 @@
-import csv
-import os
 from models.players import Player
 from models.tournaments import Tournament
 from data_manager import dict_to_tournament
@@ -11,8 +9,7 @@ class ReportController:
     def __init__(self):
         self.view = ReportView()
 
-    def list_all_players(self):
-        players = Player.load_all()
+    def list_all_players(self, players):
         sorted_players = sorted(players, key=lambda p: p["last_name"])
         choix_f = self.view.report_format()
         if choix_f == "1":
@@ -21,12 +18,10 @@ class ReportController:
         elif choix_f == "2":
             headers = ["last_name", "first_name", "birth_date", "national_id", "score"]
             rows = [[p[h] for h in headers] for p in sorted_players]
-            
             filepath = Base.export_csv("players_report.csv", headers, rows)
             self.view.confirm_export(filepath)
 
-    def list_all_tournaments(self):
-        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+    def list_all_tournaments(self, tournaments):
         choix_f = self.view.report_format()
         if choix_f == "1":
             for t in tournaments:
@@ -39,8 +34,7 @@ class ReportController:
             filepath = Base.export_csv("tournaments_report.csv", headers, rows)
             self.view.confirm_export(filepath)
 
-    def tournament_details(self):
-        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+    def tournament_details(self, tournaments):
         if not tournaments:
             print("Aucun tournoi disponible !")
             return
@@ -63,8 +57,7 @@ class ReportController:
             filepath = Base.export_csv(f"{t.name}_details.csv", headers, rows)
             self.view.confirm_export(filepath)
 
-    def list_tournament_players(self):
-        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+    def list_tournament_players(self, tournaments):
         if not tournaments:
             print("Aucun tournoi disponible !")
             return
@@ -83,8 +76,7 @@ class ReportController:
             filepath = Base.export_csv(f"{tournaments[choix].name}_players.csv", headers, rows)
             self.view.confirm_export(filepath)
 
-    def list_tournament_rounds(self):
-        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+    def list_tournament_rounds(self, tournaments):
         if not tournaments:
             print("Aucun tournoi disponible !")
             return
@@ -101,7 +93,12 @@ class ReportController:
                     p2 = m.players[1][0]
                     score1 = m.players[0][1]
                     score2 = m.players[1][1]
-                    print(f"{p1['first_name']} {p1['last_name']} ({score1}) vs {p2['first_name']} {p2['last_name']} ({score2})")
+                    print(
+                        f"{p1['first_name']} {p1['last_name']}"
+                        f" ({score1}) vs"
+                        f" {p2['first_name']} {p2['last_name']}"
+                        f" ({score2})"
+                    )
         elif choix_f == "2":
             headers = ["round_name", "player1", "score1", "player2", "score2"]
             rows = []
@@ -111,7 +108,31 @@ class ReportController:
                     p2 = m.players[1][0]
                     score1 = m.players[0][1]
                     score2 = m.players[1][1]
-                    rows.append([r.name, f"{p1['first_name']} {p1['last_name']}", score1, f"{p2['first_name']} {p2['last_name']}", score2])
+                    rows.append([
+                        r.name,
+                        f"{p1['first_name']} {p1['last_name']}",
+                        score1,
+                        f"{p2['first_name']} {p2['last_name']}",
+                        score2
+                    ])
 
             filepath = Base.export_csv(f"{t.name}_rounds.csv", headers, rows)
             self.view.confirm_export(filepath)
+
+    def run(self):
+        players = Player.load_all()
+        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        while True:
+            choix = self.view.show_menu()
+            if choix == "1":
+                self.list_all_players(players)
+            elif choix == "2":
+                self.list_all_tournaments(tournaments)
+            elif choix == "3":
+                self.tournament_details(tournaments)
+            elif choix == "4":
+                self.list_tournament_players(tournaments)
+            elif choix == "5":
+                self.list_tournament_rounds(tournaments)
+            elif choix == "6":
+                break
