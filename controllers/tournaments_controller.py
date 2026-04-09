@@ -115,15 +115,24 @@ class TournamentsController:
                 self.create_tournament()
             elif choix == "2":
                 self.select_tournament()
-            elif choix == "3" and self.current_tournament:
+                if self.current_tournament:
+                    self.run_chosen_tournament()
+            elif choix == "3":
+                break
+
+    def run_chosen_tournament(self):
+        while True:
+            choix = self.view.chosen_tournament_menu(self.current_tournament.name)
+            if choix == "1":
                 self.add_player_to_tournament(self.current_tournament)
-            elif choix == "4" and self.current_tournament:
+            elif choix == "2":
                 new_round = self.start_round(self.current_tournament)
                 if new_round:
                     print(f"\n {new_round.name} démarré avec {len(new_round.matches)} matchs !")
                     for match in new_round.matches:
                         print(f"    {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
-            elif choix == "5" and self.current_tournament:
+            elif choix == "3":
                 self.enter_results(self.current_tournament)
-            elif choix == "6":
+            elif choix == "4":
+                self.current_tournament = None
                 break

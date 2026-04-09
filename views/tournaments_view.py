@@ -31,8 +31,13 @@ class TournamentsView:
         print("\n=== GESTION DES TOURNOIS ===")
         print("1. Créer un tournoi")
         print("2. Ouvrir un tournoi")
-        print("3. Ajouter un joueur au tournoi")
-        print("4. Démarrer un round")
-        print("5. Entrer les résultats")
-        print("6. Retour au menu principal")
+        print("3. Retour au menu principal")
+        return input("Votre choix : ")
+
+    def chosen_tournament_menu(self, tournament_name):
+        print(f"\n=== {tournament_name} ===")
+        print("1. Ajouter un joueur au tournoi")
+        print("2. Démarrer un round")
+        print("3. Entrer les résultats")
+        print("4. Retour au menu précédent")
         return input("Votre choix : ")
