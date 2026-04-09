@@ -24,7 +24,11 @@ class TournamentsController:
             return
         for i, t in enumerate(self.tournaments):
             print(f"{i+1}. {t.name}")
-        choix = int(input("Choisir un tournoi : ")) - 1
+        try:
+            choix = int(input("Choisir un tournoi : ")) - 1
+        except ValueError:
+            print("Entrez un numéro valide !")
+            return
         if 0 <= choix < len(self.tournaments):
             self.current_tournament = self.tournaments[choix]
         else:
@@ -32,6 +36,9 @@ class TournamentsController:
 
     def add_player_to_tournament(self, tournament):
         players_data = Player.load_all()
+        if not players_data:
+            print("Aucun joueur enregistré - Créez des joueurs.")
+            return
         for i, p in enumerate(players_data):
             print(f"{i+1}. {p['first_name']} {p['last_name']} - {p['national_id']}")
 
@@ -86,6 +93,9 @@ class TournamentsController:
         return played
 
     def start_round(self, tournament):
+        if len(tournament.players_list) < 2:
+            print("Il faut au moins 2 joueurs pour démarrer un round !")
+            return None
         if tournament.current_round >= tournament.number_of_rounds:
             print("Nombre maximum de rounds atteint !")
             return None
@@ -107,6 +117,9 @@ class TournamentsController:
         return new_round
 
     def enter_results(self, tournament):
+        if not tournament.rounds:
+            print("Aucun round en cours !")
+            return
         current_round = tournament.rounds[-1]
         for match in current_round.matches:
             p1 = match.players[0][0]
@@ -147,19 +160,21 @@ class TournamentsController:
                 break
 
     def run_chosen_tournament(self):
-        while True:
-            choix = self.view.chosen_tournament_menu(self.current_tournament.name)
-            if choix == "1":
-                self.add_player_to_tournament(self.current_tournament)
-            elif choix == "2":
-                new_round = self.start_round(self.current_tournament)
-                if new_round:
-                    print(f"\n {new_round.name} démarré avec {len(new_round.matches)} matchs !")
-                    for match in new_round.matches:
-                        print(f"    {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
-            elif choix == "3":
-                self.enter_results(self.current_tournament)
-            elif choix == "4":
-                Tournament.save_all(self.tournaments)
-                self.current_tournament = None
-                break
+        try:
+            while True:
+                choix = self.view.chosen_tournament_menu(self.current_tournament.name)
+                if choix == "1":
+                    self.add_player_to_tournament(self.current_tournament)
+                elif choix == "2":
+                    new_round = self.start_round(self.current_tournament)
+                    if new_round:
+                        print(f"\n{new_round.name} démarré avec {len(new_round.matches)} matchs !")
+                        for match in new_round.matches:
+                            print(f"  {match.players[0][0]['first_name']} vs {match.players[1][0]['first_name']}")
+                elif choix == "3":
+                    self.enter_results(self.current_tournament)
+                elif choix == "4":
+                    break
+        finally:
+            Tournament.save_all(self.tournaments)
+            self.current_tournament = None

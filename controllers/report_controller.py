@@ -40,7 +40,11 @@ class ReportController:
             return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
-        choix = int(input("Choisir un tournoi : ")) - 1
+        try:
+            choix = int(input("Choisir un tournoi : ")) - 1
+        except ValueError:
+            print("Entrez un numéro valide !")
+            return
         t = tournaments[choix]
         choix_f = self.view.report_format()
         if choix_f == "1":
@@ -63,7 +67,11 @@ class ReportController:
             return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
-        choix = int(input("Choisir un tournoi : ")) - 1
+        try:
+            choix = int(input("Choisir un tournoi : ")) - 1
+        except ValueError:
+            print("Entrez un numéro valide !")
+            return
         players = sorted(tournaments[choix].players_list, key=lambda p: p["last_name"])
         choix_f = self.view.report_format()
         if choix_f == "1":
@@ -82,7 +90,11 @@ class ReportController:
             return
         for i, t in enumerate(tournaments):
             print(f"{i+1}. {t.name}")
-        choix = int(input("Choisir un tournoi : ")) - 1
+        try:
+            choix = int(input("Choisir un tournoi : ")) - 1
+        except ValueError:
+            print("Entrez un numéro valide !")
+            return
         t = tournaments[choix]
         choix_f = self.view.report_format()
         if choix_f == "1":
