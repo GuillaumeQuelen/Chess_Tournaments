@@ -19,3 +19,9 @@ class Player(Base):
             "national_id": self.national_id,
             "score": self.score
         }
+    
+    @classmethod
+    def from_dict(cls, data):
+        player = cls(data["last_name"], data["first_name"], data["birth_date"], data["national_id"])
+        player.score = data.get("score", 0)
+        return player

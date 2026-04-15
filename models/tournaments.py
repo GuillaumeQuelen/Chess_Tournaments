@@ -27,3 +27,19 @@ class Tournament(Base):
             "rounds": [r.to_dict() for r in self.rounds],
             "players_list": self.players_list
         }
+
+    @classmethod
+    def from_dict(cls, data):
+        from models.round import Round
+        tournament = cls(
+            data["name"],
+            data["starting_date"],
+            data["ending_date"],
+            data["location"],
+            data["description"],
+            data.get["number_of_rounds"],
+        )
+        t.current_round = data["current_round"]
+        t.players_list = [Player.from_dict(p) for p in data["players_list"]]
+        t.rounds = [Round.from_dict(r) for r in data["rounds"]]
+        return t
