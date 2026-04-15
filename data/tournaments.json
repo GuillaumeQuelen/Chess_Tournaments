@@ -1168,5 +1168,16 @@
         "current_round": 0,
         "rounds": [],
         "players_list": []
+    },
+    {
+        "name": "1",
+        "starting_date": "02/05/2026",
+        "ending_date": "07/05/2026",
+        "location": "Rouen",
+        "description": "",
+        "number_of_rounds": 4,
+        "current_round": 0,
+        "rounds": [],
+        "players_list": []
     }
 ]

@@ -12,6 +12,7 @@ class Round:
             "start_datetime": self.start_datetime,
             "end_datetime": self.end_datetime
         }
+
     @classmethod
     def from_dict(cls, data):
         from models.match import Match

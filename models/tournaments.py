@@ -1,4 +1,5 @@
 from models.base import Base
+from models.players import Player
 
 
 class Tournament(Base):
@@ -31,7 +32,7 @@ class Tournament(Base):
     @classmethod
     def from_dict(cls, data):
         from models.round import Round
-        tournament = cls(
+        t = cls(
             data["name"],
             data["starting_date"],
             data["ending_date"],

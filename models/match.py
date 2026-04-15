@@ -9,6 +9,7 @@ class Match:
                 for player in self.players
             ]
         }
+
     @classmethod
     def from_dict(cls, data):
         from models.players import Player
