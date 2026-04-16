@@ -23,8 +23,15 @@ class TournamentsView:
 
         location = input("Lieu : ")
         description = input("Description : ")
-        number_of_rounds = int(input("Nombre de tours (4 par défaut) : ") or "4")
-
+        while True:
+            rounds_input = input("Nombre de tours (4 par défaut) : ") or "4"
+            try:
+                number_of_rounds = int(rounds_input)
+                if number_of_rounds > 0:
+                    break
+                print("Le nombre de tours doit être positif !")
+            except ValueError:
+                print("Entrez un nombre valide !")
         return name, starting_date, ending_date, location, description, number_of_rounds
 
     def tournament_menu(self):
