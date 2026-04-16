@@ -12,10 +12,9 @@ class Match:
 
     @classmethod
     def from_dict(cls, data):
-        from models.players import Player
         match = cls.__new__(cls)
-        match.players = (
-            [Player.from_dict(data["players"][0][0]), data["players"][0][1]],
-            [Player.from_dict(data["players"][1][0]), data["players"][1][1]],
-        )
+        match.players = [
+            [data["players"][0][0], data["players"][0][1]],
+            [data["players"][1][0], data["players"][1][1]],
+        ]
         return match

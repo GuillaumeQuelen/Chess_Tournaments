@@ -2,13 +2,13 @@ import random
 from views.tournaments_view import TournamentsView
 from models.tournaments import Tournament
 from models.players import Player
-from data_manager import dict_to_tournament
+from datetime import datetime
 
 
 class TournamentsController:
     def __init__(self):
         self.view = TournamentsView()
-        self.tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        self.tournaments = [Tournament.from_dict(t) for t in Tournament.load_all()]
         self.current_tournament = None
 
     def create_tournament(self):
@@ -110,6 +110,7 @@ class TournamentsController:
         from models.match import Match
         tournament.current_round += 1
         new_round = Round(f"Round {tournament.current_round}")
+        new_round.start_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         pairs = self.generate_pairs(tournament)
         for player1, player2 in pairs:
             new_round.matches.append(Match(player1, player2))

@@ -1,5 +1,4 @@
 from models.base import Base
-from models.players import Player
 
 
 class Tournament(Base):
@@ -38,9 +37,9 @@ class Tournament(Base):
             data["ending_date"],
             data["location"],
             data["description"],
-            data.get["number_of_rounds"],
+            data.get("number_of_rounds", 4),
         )
         t.current_round = data["current_round"]
-        t.players_list = [Player.from_dict(p) for p in data["players_list"]]
+        t.players_list = data["players_list"]
         t.rounds = [Round.from_dict(r) for r in data["rounds"]]
         return t

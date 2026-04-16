@@ -1,6 +1,5 @@
 from models.players import Player
 from models.tournaments import Tournament
-from data_manager import dict_to_tournament
 from views.report_view import ReportView
 from models.base import Base
 
@@ -133,7 +132,7 @@ class ReportController:
 
     def run(self):
         players = Player.load_all()
-        tournaments = [dict_to_tournament(t) for t in Tournament.load_all()]
+        tournaments = [Tournament.from_dict(t) for t in Tournament.load_all()]
         while True:
             choix = self.view.show_menu()
             if choix == "1":
