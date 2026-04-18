@@ -15,10 +15,12 @@ class PlayerController:
             self.create_player()
 
     def run(self):
-        while True:
-            choix = self.view.player_menu()
-            if choix == "1":
-                self.create_player()
-            elif choix == "2":
-                break
-        Player.save_all_dicts(self.players)
+        try:
+            while True:
+                choix = self.view.player_menu()
+                if choix == "1":
+                    self.create_player()
+                elif choix == "2":
+                    break
+        finally:
+            Player.save_all_dicts(self.players)
