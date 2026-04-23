@@ -35,6 +35,9 @@ class TournamentsController:
             print("Numéro invalide !")
 
     def add_player_to_tournament(self, tournament):
+        if tournament.rounds:
+            print("Inscriptions clôturées - le tournoi a déjà commencé !")
+            return
         players_data = Player.load_all()
         if not players_data:
             print("Aucun joueur enregistré - Créez des joueurs.")

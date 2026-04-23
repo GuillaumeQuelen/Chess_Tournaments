@@ -8,6 +8,10 @@ class Base:
 
     def to_dict(self):
         raise NotImplementedError
+    
+    @classmethod
+    def from_dict(cls, data):
+        raise NotImplementedError
 
     @classmethod
     def save_all(cls, objects):
@@ -23,13 +27,11 @@ class Base:
             content = f.read()
             if not content.strip():
                 return []
-            return json.loads(content)
-
-    @classmethod
-    def save_all_dicts(cls, dicts):
-        os.makedirs("data", exist_ok=True)
-        with open(cls.data_file, "w") as f:
-            json.dump(dicts, f, indent=4)
+            try:
+                return json.loads(content)
+            except json.JSONDecodeError:
+                print(f"Erreur - {cls.data_file} - fichier réinitialisé.")
+                return []
 
     @staticmethod
     def export_csv(filename, headers, rows):

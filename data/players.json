@@ -278,5 +278,19 @@
         "birth_date": "27/03/1988",
         "national_id": "AL85749",
         "score": 0
+    },
+    {
+        "last_name": "Lourdel",
+        "first_name": "Amandine",
+        "birth_date": "27/03/1988",
+        "national_id": "AL85749",
+        "score": 0
+    },
+    {
+        "last_name": "Millet",
+        "first_name": "Doully",
+        "birth_date": "01/01/1987",
+        "national_id": "DD85484",
+        "score": 0
     }
 ]

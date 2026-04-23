@@ -1,1183 +1,219 @@
 [
     {
-        "name": "Tournoi de Paris",
-        "starting_date": "01/05/2027",
-        "ending_date": "04/05/2027",
-        "location": "Paris",
-        "description": "Tournoi printemps",
-        "number_of_rounds": 4,
-        "current_round": 4,
-        "rounds": [
-            {
-                "name": "Round 1",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "1",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00001",
-                                    "score": 4
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "2",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00002",
-                                    "score": 2.0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "3",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00003",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "4",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00004",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "5",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00005",
-                                    "score": 0.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "6",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00006",
-                                    "score": 1
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "7",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00007",
-                                    "score": 2
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "8",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00008",
-                                    "score": 3
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "9",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00009",
-                                    "score": 1.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "10",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00010",
-                                    "score": 2.5
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "11",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00011",
-                                    "score": 1.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "12",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00012",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "13",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00013",
-                                    "score": 2.5
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "14",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00014",
-                                    "score": 1
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "15",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00015",
-                                    "score": 1.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "16",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00016",
-                                    "score": 2.5
-                                },
-                                1
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            },
-            {
-                "name": "Round 2",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "1",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00001",
-                                    "score": 4
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "6",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00006",
-                                    "score": 1
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "7",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00007",
-                                    "score": 2
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "10",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00010",
-                                    "score": 2.5
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "13",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00013",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "16",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00016",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "3",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00003",
-                                    "score": 2.0
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "4",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00004",
-                                    "score": 2.0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "11",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00011",
-                                    "score": 1.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "12",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00012",
-                                    "score": 2.5
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "2",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00002",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "5",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00005",
-                                    "score": 0.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "8",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00008",
-                                    "score": 3
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "9",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00009",
-                                    "score": 1.5
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "14",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00014",
-                                    "score": 1
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "15",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00015",
-                                    "score": 1.5
-                                },
-                                1
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            },
-            {
-                "name": "Round 3",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "1",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00001",
-                                    "score": 4
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "10",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00010",
-                                    "score": 2.5
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "3",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00003",
-                                    "score": 2.0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "12",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00012",
-                                    "score": 2.5
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "13",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00013",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "16",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00016",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "6",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00006",
-                                    "score": 1
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "7",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00007",
-                                    "score": 2
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "8",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00008",
-                                    "score": 3
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "15",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00015",
-                                    "score": 1.5
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "2",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00002",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "4",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00004",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "5",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00005",
-                                    "score": 0.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "11",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00011",
-                                    "score": 1.5
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "9",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00009",
-                                    "score": 1.5
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "14",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00014",
-                                    "score": 1
-                                },
-                                0
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            },
-            {
-                "name": "Round 4",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "1",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00001",
-                                    "score": 4
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "12",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00012",
-                                    "score": 2.5
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "7",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00007",
-                                    "score": 2
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "8",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00008",
-                                    "score": 3
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "10",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00010",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "13",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00013",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "16",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00016",
-                                    "score": 2.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "3",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00003",
-                                    "score": 2.0
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "11",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00011",
-                                    "score": 1.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "2",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00002",
-                                    "score": 2.0
-                                },
-                                1
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "4",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00004",
-                                    "score": 2.0
-                                },
-                                1
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "6",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00006",
-                                    "score": 1
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "9",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00009",
-                                    "score": 1.5
-                                },
-                                0.5
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "15",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00015",
-                                    "score": 1.5
-                                },
-                                0.5
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "5",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00005",
-                                    "score": 0.5
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "14",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00014",
-                                    "score": 1
-                                },
-                                1
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            }
-        ],
-        "players_list": [
-            {
-                "last_name": "Joueur",
-                "first_name": "1",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00001",
-                "score": 4
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "2",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00002",
-                "score": 2.0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "3",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00003",
-                "score": 2.0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "4",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00004",
-                "score": 2.0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "5",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00005",
-                "score": 0.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "6",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00006",
-                "score": 1
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "7",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00007",
-                "score": 2
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "8",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00008",
-                "score": 3
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "9",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00009",
-                "score": 1.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "10",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00010",
-                "score": 2.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "11",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00011",
-                "score": 1.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "12",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00012",
-                "score": 2.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "13",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00013",
-                "score": 2.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "14",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00014",
-                "score": 1
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "15",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00015",
-                "score": 1.5
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "16",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00016",
-                "score": 2.5
-            },
-            {
-                "last_name": "Ak",
-                "first_name": "Ga",
-                "birth_date": "02/01/1996",
-                "national_id": "AO12222",
-                "score": 0
-            }
-        ]
-    },
-    {
-        "name": "Tournoi de Lyon",
-        "starting_date": "15/06/2027",
-        "ending_date": "18/06/2027",
-        "location": "Lyon",
-        "description": "Tournoi \u00e9t\u00e9",
-        "number_of_rounds": 4,
-        "current_round": 0,
-        "rounds": [],
-        "players_list": []
-    },
-    {
-        "name": "Tours",
-        "starting_date": "01/04/2026",
-        "ending_date": "12/04/2026",
-        "location": "Tours",
-        "description": "",
-        "number_of_rounds": 4,
-        "current_round": 2,
-        "rounds": [
-            {
-                "name": "Round 1",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "26",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00026",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "27",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00027",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "28",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00028",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "29",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00029",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "30",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00030",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "31",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00031",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            },
-            {
-                "name": "Round 2",
-                "matches": [
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "26",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00026",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "27",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00027",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "28",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00028",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "29",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00029",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    },
-                    {
-                        "players": [
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "30",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00030",
-                                    "score": 0
-                                },
-                                0
-                            ],
-                            [
-                                {
-                                    "last_name": "Joueur",
-                                    "first_name": "31",
-                                    "birth_date": "01/01/2000",
-                                    "national_id": "AA00031",
-                                    "score": 0
-                                },
-                                0
-                            ]
-                        ]
-                    }
-                ],
-                "start_datetime": null,
-                "end_datetime": null
-            }
-        ],
-        "players_list": [
-            {
-                "last_name": "Joueur",
-                "first_name": "26",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00026",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "27",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00027",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "28",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00028",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "29",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00029",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "30",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00030",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "31",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00031",
-                "score": 0
-            },
-            {
-                "last_name": "Joueur",
-                "first_name": "32",
-                "birth_date": "01/01/2000",
-                "national_id": "AA00032",
-                "score": 0
-            }
-        ]
-    },
-    {
         "name": "Top 16",
-        "starting_date": "04/06/2026",
-        "ending_date": "14/06/2026",
-        "location": "Chartres",
-        "description": "Arbitre Erick MOURET",
-        "number_of_rounds": 11,
-        "current_round": 0,
-        "rounds": [],
-        "players_list": []
-    },
-    {
-        "name": "1",
         "starting_date": "02/05/2026",
-        "ending_date": "07/05/2026",
+        "ending_date": "08/05/2027",
         "location": "Rouen",
         "description": "",
         "number_of_rounds": 4,
-        "current_round": 0,
-        "rounds": [],
-        "players_list": []
+        "current_round": 1,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Mortimer",
+                                    "first_name": "Bob",
+                                    "birth_date": "02/05/1959",
+                                    "national_id": "UK59055",
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "last_name": "Reeves",
+                                    "first_name": "Vic",
+                                    "birth_date": "22/03/1962",
+                                    "national_id": "UK62035",
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Coogan",
+                                    "first_name": "Steve",
+                                    "birth_date": "14/10/1965",
+                                    "national_id": "UK65101",
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "last_name": "Everett",
+                                    "first_name": "Rupert",
+                                    "birth_date": "29/05/1959",
+                                    "national_id": "UK59052",
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Fry",
+                                    "first_name": "Stephen",
+                                    "birth_date": "24/08/1957",
+                                    "national_id": "UK57082",
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "last_name": "Laurie",
+                                    "first_name": "Hugh",
+                                    "birth_date": "11/06/1959",
+                                    "national_id": "UK59061",
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Atkinson",
+                                    "first_name": "Rowan",
+                                    "birth_date": "06/01/1955",
+                                    "national_id": "UK55010",
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "last_name": "McIntyre",
+                                    "first_name": "Michael",
+                                    "birth_date": "21/02/1976",
+                                    "national_id": "UK76022",
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Carr",
+                                    "first_name": "Jimmy",
+                                    "birth_date": "30/09/1972",
+                                    "national_id": "UK72093",
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "last_name": "Le Rossignol",
+                                    "first_name": "Alexis",
+                                    "birth_date": "28/07/1984",
+                                    "national_id": "AR85641",
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "start_datetime": "23/04/2026 09:10:04",
+                "end_datetime": null
+            }
+        ],
+        "players_list": [
+            {
+                "last_name": "Mortimer",
+                "first_name": "Bob",
+                "birth_date": "02/05/1959",
+                "national_id": "UK59055",
+                "score": 1
+            },
+            {
+                "last_name": "Reeves",
+                "first_name": "Vic",
+                "birth_date": "22/03/1962",
+                "national_id": "UK62035",
+                "score": 0
+            },
+            {
+                "last_name": "Coogan",
+                "first_name": "Steve",
+                "birth_date": "14/10/1965",
+                "national_id": "UK65101",
+                "score": 0
+            },
+            {
+                "last_name": "Everett",
+                "first_name": "Rupert",
+                "birth_date": "29/05/1959",
+                "national_id": "UK59052",
+                "score": 1
+            },
+            {
+                "last_name": "Fry",
+                "first_name": "Stephen",
+                "birth_date": "24/08/1957",
+                "national_id": "UK57082",
+                "score": 1
+            },
+            {
+                "last_name": "Laurie",
+                "first_name": "Hugh",
+                "birth_date": "11/06/1959",
+                "national_id": "UK59061",
+                "score": 0
+            },
+            {
+                "last_name": "Atkinson",
+                "first_name": "Rowan",
+                "birth_date": "06/01/1955",
+                "national_id": "UK55010",
+                "score": 0
+            },
+            {
+                "last_name": "McIntyre",
+                "first_name": "Michael",
+                "birth_date": "21/02/1976",
+                "national_id": "UK76022",
+                "score": 1
+            },
+            {
+                "last_name": "Carr",
+                "first_name": "Jimmy",
+                "birth_date": "30/09/1972",
+                "national_id": "UK72093",
+                "score": 1
+            },
+            {
+                "last_name": "Le Rossignol",
+                "first_name": "Alexis",
+                "birth_date": "28/07/1984",
+                "national_id": "AR85641",
+                "score": 0
+            },
+            {
+                "last_name": "Lourdel",
+                "first_name": "Amandine",
+                "birth_date": "27/03/1988",
+                "national_id": "AL85749",
+                "score": 0
+            }
+        ]
     }
 ]
