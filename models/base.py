@@ -8,7 +8,7 @@ class Base:
 
     def to_dict(self):
         raise NotImplementedError
-    
+
     @classmethod
     def from_dict(cls, data):
         raise NotImplementedError
@@ -43,3 +43,9 @@ class Base:
             for row in rows:
                 writer.writerow(row)
         return filepath
+
+    @classmethod
+    def save_all_dicts(cls, dicts):
+        os.makedirs("data", exist_ok=True)
+        with open(cls.data_file, "w") as f:
+            json.dump(dicts, f, indent=4)

@@ -292,5 +292,12 @@
         "birth_date": "01/01/1987",
         "national_id": "DD85484",
         "score": 0
+    },
+    {
+        "last_name": "l",
+        "first_name": "l",
+        "birth_date": "01/01/2000",
+        "national_id": "IL12543",
+        "score": 0
     }
 ]

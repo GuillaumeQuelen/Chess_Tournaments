@@ -215,5 +215,156 @@
                 "score": 0
             }
         ]
+    },
+    {
+        "name": "Tournoi de Paris",
+        "starting_date": "01/06/2026",
+        "ending_date": "10/06/2026",
+        "location": "Paris",
+        "description": "",
+        "number_of_rounds": 4,
+        "current_round": 2,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Reeves",
+                                    "first_name": "Vic",
+                                    "birth_date": "22/03/1962",
+                                    "national_id": "UK62035",
+                                    "score": 1
+                                },
+                                1
+                            ],
+                            [
+                                {
+                                    "last_name": "Coogan",
+                                    "first_name": "Steve",
+                                    "birth_date": "14/10/1965",
+                                    "national_id": "UK65101",
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Everett",
+                                    "first_name": "Rupert",
+                                    "birth_date": "29/05/1959",
+                                    "national_id": "UK59052",
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "last_name": "Fry",
+                                    "first_name": "Stephen",
+                                    "birth_date": "24/08/1957",
+                                    "national_id": "UK57082",
+                                    "score": 1
+                                },
+                                1
+                            ]
+                        ]
+                    }
+                ],
+                "start_datetime": "24/04/2026 09:07:15",
+                "end_datetime": null
+            },
+            {
+                "name": "Round 2",
+                "matches": [
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Reeves",
+                                    "first_name": "Vic",
+                                    "birth_date": "22/03/1962",
+                                    "national_id": "UK62035",
+                                    "score": 1
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "last_name": "Fry",
+                                    "first_name": "Stephen",
+                                    "birth_date": "24/08/1957",
+                                    "national_id": "UK57082",
+                                    "score": 1
+                                },
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "players": [
+                            [
+                                {
+                                    "last_name": "Coogan",
+                                    "first_name": "Steve",
+                                    "birth_date": "14/10/1965",
+                                    "national_id": "UK65101",
+                                    "score": 0
+                                },
+                                0
+                            ],
+                            [
+                                {
+                                    "last_name": "Everett",
+                                    "first_name": "Rupert",
+                                    "birth_date": "29/05/1959",
+                                    "national_id": "UK59052",
+                                    "score": 0
+                                },
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "start_datetime": "24/04/2026 09:07:39",
+                "end_datetime": null
+            }
+        ],
+        "players_list": [
+            {
+                "last_name": "Reeves",
+                "first_name": "Vic",
+                "birth_date": "22/03/1962",
+                "national_id": "UK62035",
+                "score": 1
+            },
+            {
+                "last_name": "Coogan",
+                "first_name": "Steve",
+                "birth_date": "14/10/1965",
+                "national_id": "UK65101",
+                "score": 0
+            },
+            {
+                "last_name": "Everett",
+                "first_name": "Rupert",
+                "birth_date": "29/05/1959",
+                "national_id": "UK59052",
+                "score": 0
+            },
+            {
+                "last_name": "Fry",
+                "first_name": "Stephen",
+                "birth_date": "24/08/1957",
+                "national_id": "UK57082",
+                "score": 1
+            }
+        ]
     }
 ]
